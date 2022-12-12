@@ -1,0 +1,49 @@
+.detail {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+	text-align: center;
+}
+
+.detail img {
+	height: 300px;
+	padding: 2em;
+}
+
+.title {
+	font-weight: bold;
+	margin-bottom: 1em;
+}
+
+.description {
+	font-size: 0.9rem;
+}
+
+.price {
+	margin-bottom: 1em;
+	font-weight: bold;
+	font-size: 1.2rem;
+}
+
+@media (min-width: 600px) {
+	.detail img {
+		height: 350px;
+	}
+
+	.title {
+		font-size: 1.4rem;
+	}
+
+	.description {
+		font-size: 1.1rem;
+	}
+
+	.price {
+		font-size: 1.5rem;
+	}
+
+	.detail-btn {
+		font-size: 1.1rem;
+	}
+}
