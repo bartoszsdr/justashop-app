@@ -28,7 +28,7 @@ const StoreItemForm = props => {
 			<Input
 				ref={amountInputRef}
 				className={classes.input}
-				label='Ilość'
+				label='Quantity'
 				input={{
 					id: 'amount_' + props.id,
 					type: 'number',
@@ -39,9 +39,9 @@ const StoreItemForm = props => {
 				}}
 			/>
 			<Button type='submit' className={classes.button}>
-				Dodaj +
+				ADD +
 			</Button>
-			{!amountIsValid && <p>Wprowadź poprawną ilość.</p>}
+			{!amountIsValid && <p>Insert a valid amount.</p>}
 		</form>
 	)
 }

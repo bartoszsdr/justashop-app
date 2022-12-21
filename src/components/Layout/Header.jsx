@@ -5,7 +5,7 @@ import classes from './Header.module.css'
 const Header = () => {
 	return (
 		<header className={classes.header}>
-			<img src={headerImg} alt='Kobieta niosąca torby z zakupami.' />
+			<img src={headerImg} alt='A woman carrying shopping bags.' />
 			<h1>
 				Lorem
 				<br />

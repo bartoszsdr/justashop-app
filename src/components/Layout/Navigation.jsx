@@ -19,7 +19,7 @@ const Navigation = props => {
 
 	const logoutHandler = () => {
 		authCtx.logout()
-		navigate('/logowanie')
+		navigate('/login')
 	}
 
 	return (
@@ -34,41 +34,41 @@ const Navigation = props => {
 					<ul>
 						<li>
 							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/'>
-								Strona główna
+								Home
 							</NavLink>
 						</li>
 						{isLoggedIn && (
 							<li>
-								<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/produkty'>
-									Produkty
+								<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/products'>
+									Products
 								</NavLink>
 							</li>
 						)}
 						{!isLoggedIn && (
 							<li>
-								<NavLink to='/logowanie'>Produkty</NavLink>
+								<NavLink to='/login'>Products</NavLink>
 							</li>
 						)}
 						<li>
-							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/o-sklepie'>
-								O sklepie
+							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/about'>
+								About
 							</NavLink>
 						</li>
 						<li>
-							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/kontakt'>
-								Kontakt
+							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/contact'>
+								Contact
 							</NavLink>
 						</li>
 						{!isLoggedIn && (
 							<li className={classes['navbar-btn']}>
-								<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/logowanie'>
-									<Button>Zaloguj się</Button>
+								<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/login'>
+									<Button>Login</Button>
 								</NavLink>
 							</li>
 						)}
 						{isLoggedIn && (
 							<li className={classes['navbar-btn']}>
-								<Button onClick={logoutHandler}>Wyloguj się</Button>
+								<Button onClick={logoutHandler}>Logout</Button>
 							</li>
 						)}
 						{isLoggedIn && (

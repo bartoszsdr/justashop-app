@@ -21,7 +21,7 @@ const Navigation = props => {
 
 	const logoutHandler = () => {
 		authCtx.logout()
-		navigate('/logowanie')
+		navigate('/login')
 	}
 
 	return (
@@ -37,23 +37,23 @@ const Navigation = props => {
 						<li>
 							<NavLink
 								className={navData => (navData.isActive ? classes.active : '')}
-								to={isLoggedIn ? '/produkty' : '/logowanie'}>
+								to={isLoggedIn ? '/products' : '/login'}>
 								<FaShoppingBag />
 							</NavLink>
 						</li>
 						<li>
-							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/o-sklepie'>
+							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/about'>
 								<FaInfo />
 							</NavLink>
 						</li>
 						<li>
-							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/kontakt'>
+							<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/contact'>
 								<FaPhone />
 							</NavLink>
 						</li>
 						{!isLoggedIn && (
 							<li className={classes['navbar-btn']}>
-								<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/logowanie'>
+								<NavLink className={navData => (navData.isActive ? classes.active : '')} to='/login'>
 									<Button>
 										<IoMdLogIn />
 									</Button>

@@ -46,7 +46,7 @@ const AuthForm = props => {
 					return res.json()
 				} else {
 					res.json().then(data => {
-						let errorMessage = 'Błąd logowania!'
+						let errorMessage = 'Login error!'
 						alert(errorMessage)
 					})
 				}
@@ -59,17 +59,17 @@ const AuthForm = props => {
 
 	return (
 		<>
-			<h2 className={classes.heading}>👋 Cześć! Zaloguj się, aby skorzystać ze sklepu.</h2>
+			<h2 className={classes.heading}>👋 Hi! Please login to use the shop.</h2>
 			<Card className={classes.card}>
 				<form className={classes.form} onSubmit={handleSubmit(onSubmit)}>
 					<input
-						placeholder='Adres email'
+						placeholder='Email'
 						type='email'
 						{...register('email', {
 							required: true,
 							minLength: {
 								value: 4,
-								message: 'Email musi zawierać @ i > 4 znaków.',
+								message: 'Email must contain @ and > 4 characters.',
 							},
 						})}
 					/>
@@ -77,13 +77,13 @@ const AuthForm = props => {
 					<p>{errors.email?.message}</p>
 
 					<input
-						placeholder='Hasło'
+						placeholder='Password'
 						type='password'
 						{...register('password', {
 							required: true,
 							minLength: {
 								value: 4,
-								message: 'Hasło musi zawierać > 6 znaków.',
+								message: 'Password must contain > 6 characters.',
 							},
 						})}
 					/>
@@ -92,10 +92,10 @@ const AuthForm = props => {
 
 					{!isLoading && (
 						<Button className={classes['form-btn']} type='submit'>
-							Zaloguj się
+							Login
 						</Button>
 					)}
-					{isLoading && <Button className={classes['form-btn']}>Ładowanie...</Button>}
+					{isLoading && <Button className={classes['form-btn']}>Loading...</Button>}
 				</form>
 			</Card>
 		</>

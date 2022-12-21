@@ -14,9 +14,9 @@ const StoreDetail = () => {
 				<h3 className={classes.title}>{location.state.title}</h3>
 				<p className={classes.description}>{location.state.description}</p>
 				<img src={location.state.image} alt='' />
-				<p className={classes.price}>{location.state.price} PLN</p>
-				<Link to='/produkty'>
-					<Button className={classes['detail-btn']}>Powrót</Button>
+				<p className={classes.price}>{location.state.price} €</p>
+				<Link to='/products'>
+					<Button className={classes['detail-btn']}>Close</Button>
 				</Link>
 			</div>
 		</Modal>

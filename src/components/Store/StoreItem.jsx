@@ -13,7 +13,7 @@ import classes from './StoreItem.module.css'
 const StoreItem = props => {
 	const cartCtx = useContext(CartContext)
 
-	const price = `${props.price.toFixed(2)} PLN`
+	const price = `${props.price.toFixed(2)} €`
 
 	const addToCartHandler = amount => {
 		cartCtx.addItem({
@@ -34,7 +34,7 @@ const StoreItem = props => {
 				<p>{price}</p>
 			</div>
 			<Link
-				to={`/produkty/${props.id}`}
+				to={`/products/${props.id}`}
 				element={<StoreDetail />}
 				state={{
 					title: props.title,
@@ -42,7 +42,7 @@ const StoreItem = props => {
 					description: props.description,
 					image: props.image,
 				}}>
-				<Button className={classes['details-btn']}>Szczegóły</Button>
+				<Button className={classes['details-btn']}>Details</Button>
 			</Link>
 			<StoreItemForm id={props.id} onAddToCart={addToCartHandler} />
 		</Card>

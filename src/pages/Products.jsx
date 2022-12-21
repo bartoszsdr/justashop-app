@@ -35,7 +35,7 @@ const ProductsPage = () => {
 
 	return (
 		<section>
-			<h2 style={{ marginTop: 45, textAlign: 'center', fontSize: 20 }}>Życzymy udanych zakupów! 🤗</h2>
+			<h2 style={{ marginTop: 45, textAlign: 'center', fontSize: 20 }}>Happy shopping! 🤗</h2>
 			<StoreList products={loadedProducts} />
 		</section>
 	)
