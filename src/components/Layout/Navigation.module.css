@@ -13,6 +13,10 @@
 	height: 100%;
 }
 
+.navbar-logo {
+	height: 60px;
+}
+
 .navbar-nav ul {
 	display: flex;
 	align-items: center;

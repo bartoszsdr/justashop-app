@@ -28,7 +28,7 @@ const Navigation = props => {
 				<div className={classes['navbar-nav']}>
 					<div>
 						<NavLink to='/'>
-							<img src={logo} alt='Logo' />
+							<img src={logo} alt='Logo' className={classes['navbar-logo']} />
 						</NavLink>
 					</div>
 					<ul>
